@@ -5,9 +5,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="description" content="">
         <meta name="author" content="">
-        <link rel="icon" href="../../favicon.ico">
+        <link rel="icon" href="images/favicon.ico">
 
-        <title>Dashboard</title>
+        <title>Legibra Dashboard</title>
 
         <!-- Bootstrap core CSS -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -16,18 +16,25 @@
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
         
         <!-- Material Design Icons-->
-<!--        <link rel="stylesheet" href="https://cdn.materialdesignicons.com/1.9.32/css/materialdesignicons.min.css">-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
-<!--
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-              rel="stylesheet">
--->
-
+        
+        <!-- Font Awesome Icons-->
+        <link href="css/font-awesome.min.css" rel="stylesheet">
+        
         <!-- Custom styles-->
         <link href="css/dashboard.css" rel="stylesheet">
+        
+        <!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<![endif]-->     
     </head>
 
 <body>
+
+                        <!--TOP NAV-->
+                        
 <nav class="navbar navbar-toggleable-md navbar-inverse fixed-top bg-inverse aqua">
    <div class="wrapper">
     <a class="navbar-brand" href="#"><img src="images/navbrand.png" alt="">LGB Hospital</a>
@@ -35,27 +42,36 @@
     <div class="collapse navbar-collapse navbar-right" id="navbarsExampleDefault">
         <ul class="navbar-nav ">
             <li class="nav-item active">
-                <a class="nav-link" href="#"><i class="zmdi zmdi-account "></i></a>
+                <a class="nav-link" href="#"><i class="zmdi zmdi-search "></i></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#"><i class="zmdi zmdi-account "></i></a>
+                <a class="nav-link" href="#"><i class="zmdi zmdi-email"></i><i class="fa fa-circle nav-notif1">
+                    <span class="num">7</span></i></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#"><i class="zmdi zmdi-account "></i></a>
+                <a class="nav-link" href="#"><i class="zmdi zmdi-notifications "></i><i class="fa fa-circle nav-notif1" id="
+                   nav-notif1">
+                    <span class="num">3</span></i></a>
             </li>
+<!--
             <li class="nav-item">
                 <a class="nav-link" href="#">Logout</a>
             </li>
+-->
             <li class="nav-item">
-                <a class="nav-link" href="#"><i class="zmdi zmdi-account "></i></a>
+                <a class="nav-link" href="#"><span>Logout</span><i class="zmdi zmdi-sign-in "></i></a>
             </li>
         </ul>        
     </div>
     </div>
 </nav>
-
+                    <!--MAIN SECTION-->
+                    
 <div class="container-fluid">  
-    <div class="row">    
+    <div class="row"> 
+       
+                <!-- LEFT NAVIGATION BAR   -->
+                
         <nav class="col-sm-3 col-md-2 hidden-xs-down bg-faded sidebar white">
             <!-- menu profile quick info -->
             <div class="profile clearfix">
@@ -64,18 +80,18 @@
                 </div>
                 <div class="profile_info">
                     <span class="g-font">Welcome,</span>
-                    <h5 class="b-font"><strong>Mr. Admin</strong></h5>
+                    <h5 class="b-font"><strong>Ms. Admin</strong></h5>
                 </div>
             </div>
             <!-- /menu profile quick info -->
 
            <hr>
-            <ul class="nav nav-pills flex-column">
+            <ul class="nav nav-pills " >
                 <li class="nav-item">
                     <a class="nav-link active" href="#"><i class="zmdi zmdi-view-dashboard"></i>Dashboard<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="zmdi zmdi-account "></i>Doctors</a>
+                    <a class="nav-link" href="#"><i class="zmdi left-nav zmdi-account "></i>Doctors</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#"><i class="zmdi zmdi-accounts-alt "></i>Patients</a>
@@ -90,7 +106,8 @@
                     <a class="nav-link" href="#"><i class="zmdi zmdi-money "></i>Billing</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="zmdi zmdi-email "></i>Mailbox</a>
+                    <a class="nav-link" href="#"><i class="zmdi zmdi-email "></i>Mailbox <i id="l-notif" class="fa fa-circle">
+                        <span class="num">7</span></i></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#"><i class="zmdi zmdi-male-female  "></i>Hospital Staff</a>
@@ -98,7 +115,8 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#"><i class="zmdi zmdi-grid"></i>Event Management</a>
                 </li>
-            </ul>            
+            </ul>
+                       
         </nav> <!--./sidebar nav -->
 
                     <!-- DASHBOARD TOP-->
@@ -110,7 +128,7 @@
             <div class="col-6 col-sm-3 placeholder">
                 <div class="white d-content">
                     <div class="icon left red">
-                        <i class="zmdi zmdi-account"></i>
+                        <a href="#"><i class="zmdi zmdi-account"></i></a> 
                     </div>                   
                 <h1 class="i-block text-right right">10 <span class="g-font block">Doctor</span></h1>
                 </div>
@@ -118,7 +136,7 @@
             <div class="col-6 col-sm-3 placeholder">
                 <div class="white d-content">
                     <div class="icon left aqua">
-                        <i class="zmdi zmdi-assignment-o"></i>
+                        <a href="#"><i class="zmdi zmdi-assignment-o"></i></a>
                     </div>                   
                     <h1 class="i-block text-right right">6<span class="g-font block">Operation <span class="block">Report</span></span></h1>
                 </div>
@@ -126,7 +144,7 @@
             <div class="col-6 col-sm-3 placeholder">
                 <div class="white d-content">
                     <div class="icon left green">
-                        <i class="zmdi zmdi-face"></i>
+                        <a href="#"><i class="zmdi zmdi-face"></i></a>
                     </div>                   
                     <h1 class="i-block text-right right">8 <span class="g-font block">Birth <span class="block">Report</span></span></h1>
                 </div>
@@ -134,7 +152,7 @@
             <div class="col-6 col-sm-3 placeholder">
                 <div class="white d-content">
                     <div class="icon left orange">
-                        <i class="zmdi zmdi-airline-seat-individual-suite"></i>
+                        <a href="#"><i class="zmdi zmdi-airline-seat-individual-suite"></i></a>
                     </div>                   
                     <h1 class="i-block text-right right">4 <span class="g-font block">Death <span class="block">Report</span></span></h1>
                 </div>
@@ -144,11 +162,11 @@
     
                     <!-- DASHBOARD CHARTS-->
 
-<!--<div class="row">-->
     <div class="col-md-5 col-sm-5 " >
         <div class="white chart" >
             <h5 class="i-block headings"><i class="zmdi zmdi-circle l-orange"></i>Quality of Service</h5>
             <h5 class="i-block headings"><i class="zmdi zmdi-circle d-orange"></i>Service recommendations</h5>
+            <div id="chartContainer1" style="height: 200px;"></div>
             
         </div>
     </div>
@@ -156,50 +174,52 @@
         <div class="white chart" >
             <h5 class="i-block headings"><i class="zmdi zmdi-circle l-red"></i>OPD Earnings</h5>
             <h5 class="i-block headings"><i class="zmdi zmdi-circle d-blue"></i>IPD Earnings</h5>
-
+            <div id="chartContainer2" style="height: 200px;"></div>
         </div>
     </div>
         <div class="col-md-5 col-sm-5 " >
             <div class="white chart" >
                 <h5 class="i-block headings">New Patients</h5>
                 <h5 class="i-block headings right">68.5%</h5>
-
+                <div id="chartContainer3" style="height: 150px;"></div>
             </div>
         </div>
         <div class="col-md-5 col-sm-5 " >
             <div class="white chart" >
                 <h5 class="i-block headings">Pharmacy Orders</h5>
                 <h5 class="i-block headings right">2332</h5>
-
+                <div id="chartContainer4" style="height: 150px;"></div>
             </div>
         </div>
         <div class="col-md-5 col-sm-5 " >
             <div class="white chart" >
                 <h5 class="i-block headings">Lab Tests</h5>
                 <h5 class="i-block headings right">332</h5>
-
+                <div id="chartContainer5" style="height: 150px;"></div>
             </div>
         </div>
         <div class="col-md-5 col-sm-5 " >
             <div class="white chart" >
                 <h5 class="i-block headings">OPD/IPD visitors</h5>
                 <h5 class="i-block headings right">67/98</h5>
-
+                <div id="chartContainer6" style="height: 150px;"></div>
             </div>
         </div>
-            
-<!--</div>-->
     </div> <!--./row -->
     </div><!--./container-fluid -->
 
 
             <!-- Bootstrap core JavaScript -->
-            <!-- Placed at the end of the document so the pages load faster -->
+    
 <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
-<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="js/jquery-3.1.1.min.js"></script>
+<!--<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 <script src="js/bootstrap.min.js"></script>
+<script src="js/canvasjs.min.js"></script>
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 <script src="js/ie10-viewport-bug-workaround.js"></script>
+    <script src="js/graph.js"></script>
+
 </body>
 </html>                    
