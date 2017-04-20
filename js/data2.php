@@ -2,7 +2,7 @@
 
 header('Content-Type: application/json');
 
-$con = mysqli_connect("127.0.0.1","graphs","graphs123","graphs");
+$con = mysqli_connect("127.0.0.1","graphs","graph123","graphs");
 
 // Check connection
 if (mysqli_connect_errno($con))
