@@ -18,8 +18,12 @@ h1 {
     margin-bottom: 20px;
     padding-bottom: 9px;
     border-bottom: 1px solid #eee;
+    
 }
 
+.top {
+    font-size: 26px !important;
+}
 /*HELPER CLASSES*/
 
 .wrapper {
@@ -297,14 +301,20 @@ hr {
     padding-bottom: 3rem;
 }
 .d-content {
-    padding: 20px;
+    padding: 15px;
 }
 .d-content span {
     font-size: 14px;
 }
+
+@media (min-width:769px)and (max-width: 797px) {
+    .d-content span {
+        font-size: 12px;
+    }
+}
 .icon {
-    height: 70px;
-    width: 70px;
+    height: 65px;
+    width: 65px;
     display: inline-block;
     vertical-align: middle;
     -webkit-transition: .7s;
@@ -330,6 +340,15 @@ hr {
     color: #3c4858;
 }
 
+@media (min-width: 768px) and (max-width: 991px){
+    .col-sm-5 {
+        width: 37%!important;
+        
+}
+    .headings {
+        font-size: 7px;
+    }
+}
 /*----------------------------------------------------------------------------
 
                                     CHARTS
