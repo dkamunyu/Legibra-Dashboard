@@ -307,7 +307,7 @@ hr {
     font-size: 14px;
 }
 
-@media (min-width:769px)and (max-width: 797px) {
+@media (min-width:768px)and (max-width: 797px) {
     .d-content span {
         font-size: 12px;
     }
