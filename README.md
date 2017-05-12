@@ -1,9 +1,10 @@
 # LEGIBRA DASHBOARD
-PSD to HTML (PSD provided by Legibra)
+PSD to HTML5 
 Conversion using:
 HTML/CSS,
 jQuery/JS,
 Bootstrap,
-Mysql
+Mysql.
+(PSD provided by Legibra)
 
-View site: http://www.dorinakamunyu.com/dashboard/
+View Dashboard: http://www.dorinakamunyu.com/dashboard/
