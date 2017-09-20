@@ -4,8 +4,8 @@ Conversion using:
 HTML/CSS,
 jQuery/JS,
 Bootstrap,
-PHP
-Mysql
+PHP,
+Mysql.
 (PSD provided by Legibra)
 
 View Dashboard: http://www.dorinakamunyu.com/dashboard/
